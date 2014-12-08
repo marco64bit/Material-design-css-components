@@ -7,6 +7,9 @@ material-loader-spinner{
 	-webkit-border-radius:200px;
 	padding: 4px;
 	height: auto;
+  transition: .444s ease-in;
+  transform: scale(0);
+  -webkit-transform: scale(0);
 }
 
 material-loader-spinner .circular{
@@ -15,14 +18,27 @@ material-loader-spinner .circular{
 }
 
 
-material-loader-spinner .path {
+
+material-loader-spinner.slide .path {
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  animation: 
+   slide 4.5s ease-in-out infinite,
+   color 6s ease-in-out infinite
+  ;
+  -webkit-animation: slide 4.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  stroke-linecap: round;
+  stroke: #3f88f8;
+}
+
+material-loader-spinner.multi .path {
   stroke-dasharray: 1,200;
   stroke-dashoffset: 0;
   animation: 
    dash 1.5s ease-in-out infinite,
-   color 6s ease-in-out infinite
+   color 18s ease-in-out infinite
   ;
-  -webkit-animation: dash 1.5s ease-in-out infinite, color 6s ease-in-out infinite;
+  -webkit-animation: dash 1.5s ease-in-out infinite, color 18s ease-in-out infinite;
   stroke-linecap: round;
   stroke: #3f88f8;
 }
@@ -72,6 +88,66 @@ material-loader-spinner .path {
   stroke: #F83F3F;
  }
 }
+
+@-webkit-keyframes slide{
+ 0%{
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  stroke: #FADE1C;
+ }
+ 13%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35;
+  stroke: #FADE1C;
+ }
+ 26%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124;
+  stroke: #FADE1C;
+ }
+ 26.0001%{
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+}
+ 38%{
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  stroke: #3f88f8;
+ }
+ 50%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35;
+  stroke: #3f88f8;
+ }
+ 62%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124;
+  stroke: #3f88f8;
+ }
+ 62.0001%{
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+ }
+ 74%{
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+  stroke: #F83F3F;
+ }
+ 86%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -35;
+  stroke: #F83F3F;
+ }
+ 99.999%{
+  stroke-dasharray: 89,200;
+  stroke-dashoffset: -124;
+  stroke: #F83F3F;
+ }
+ 99.9991%{
+  stroke-dasharray: 1,200;
+  stroke-dashoffset: 0;
+ }
+}
 /* SIZES */
 
 material-loader-spinner.xs{width: 16px}
@@ -100,23 +176,41 @@ material-loader-spinner.lg .circular{
 	height: 50px;
  	width: 50px; 
 }
+
+material-loader-spinner.anim{
+  transform: scale(1);
+  -webkit-transform: scale(1);
+}
+
 </style>
 
-<material-loader-spinner class="xs">
+<material-loader-spinner class="multi xs">
 	<svg class="circular" >
 	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
 	</svg>
 </material-loader-spinner>
 
-<material-loader-spinner class="md">
+<material-loader-spinner class="multi md">
 	<svg class="circular">
 	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
 	</svg>
 </material-loader-spinner>
 
-<material-loader-spinner class="lg">
+<material-loader-spinner class="multi lg">
 	<svg class="circular">
 	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
 	</svg>
+</material-loader-spinner>
+
+<material-loader-spinner class="slide lg">
+  <svg class="circular">
+    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+  </svg>
+</material-loader-spinner>
+
+<material-loader-spinner class="slide md">
+  <svg class="circular">
+    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+  </svg>
 </material-loader-spinner>
 
