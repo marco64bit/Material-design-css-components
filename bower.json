@@ -1,0 +1,15 @@
+{
+  "name": "material-components",
+  "version": "0.0.0",
+  "homepage": "https://github.com/marco64bit/Material-design-css-components",
+  "authors": [
+    "Marco Pretelli(lordscapoladestra@gmail.com)"
+  ],
+  "description": "css material components",
+  "main": "index.html",
+  "keywords": [
+    "material",
+    "css3"
+  ],
+  "license": "MIT"
+}
