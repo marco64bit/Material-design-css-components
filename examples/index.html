@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Example</title>
+  <link rel="stylesheet" type="text/css" href="../dist/material.css">
+</head>
+<body>
+
+  <h3>Color Change</h3>
+  <material-loader-spinner class="multi xs anim">
+    <svg class="circular" >
+  	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+  	</svg>
+  </material-loader-spinner>
+
+  <material-loader-spinner class="multi md anim">
+  	<svg class="circular">
+  	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+  	</svg>
+  </material-loader-spinner>
+
+  <material-loader-spinner class="multi lg anim">
+  	<svg class="circular">
+  	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+  	</svg>
+  </material-loader-spinner>
+
+  <h3> Color slide</h3>
+
+  <material-loader-spinner class="slide lg anim">
+    <svg class="circular">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+    </svg>
+  </material-loader-spinner>
+
+  <material-loader-spinner class="slide md anim">
+    <svg class="circular">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+    </svg>
+  </material-loader-spinner>
+
+  <material-loader-spinner class="slide xs anim">
+    <svg class="circular">
+      <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
+    </svg>
+  </material-loader-spinner>
+
+  <button onclick="toggle()">toggle animation</button>
+  <script type="text/javascript">
+  function toggle() {
+    var elem = document.querySelector(".slide");
+    if(elem.className == "slide lg anim") {
+      elem.className = "slide lg";
+    }else{
+      elem.className = "slide lg anim";
+    }
+  }
+  </script>
+</body>
+</html>
+

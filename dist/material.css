@@ -1,20 +1,25 @@
-<style>
+/* reset css*/
+  material-loader-spinner, material-loader-spinner * {
+    box-sizing: initial!important;
+  }
+/**/
+
 
 material-loader-spinner{
-	display: block;
-	background: #F0F0F0;
-	border-radius: 200px;
-	-webkit-border-radius:200px;
-	padding: 4px;
-	height: auto;
-  transition: .444s ease-in;
+  display: block;
+  background: #F0F0F0;
+  border-radius: 200px;
+  -webkit-border-radius:200px;
+  padding: 4px;
+  height: auto;
+  transition: .333s ease-in;
   transform: scale(0);
   -webkit-transform: scale(0);
 }
 
 material-loader-spinner .circular{
-	animation: rotate 2s linear infinite;
-	-webkit-animation: rotate 2s linear infinite;
+  animation: rotate 2s linear infinite;
+  -webkit-animation: rotate 2s linear infinite;
 }
 
 
@@ -150,67 +155,34 @@ material-loader-spinner.multi .path {
 }
 /* SIZES */
 
-material-loader-spinner.xs{width: 16px}
+material-loader-spinner.xs{width: 16px;height: 16px;}
 material-loader-spinner.xs .circular{ 
-	height: 16px;
- 	width: 16px; 
+  height: 16px;
+  width: 16px; 
 }
 material-loader-spinner.xs circle{
-	transform: scale(.33);
-	-webkit-transform: scale(.33);
+  transform: scale(.33);
+  -webkit-transform: scale(.33);
 }
 
 /**/
-material-loader-spinner.md{width: 25px}
+material-loader-spinner.md{width: 25px;height: 25px;}
 material-loader-spinner.md .circular{ 
-	height: 25px;
- 	width: 25px; 
+  height: 25px;
+  width: 25px; 
 }
 material-loader-spinner.md circle{
-	transform: scale(.5);
-	-webkit-transform: scale(.5);
+  transform: scale(.5);
+  -webkit-transform: scale(.5);
 }
 /**/
-material-loader-spinner.lg{width: 50px}
+material-loader-spinner.lg{width: 50px;height: 50px;}
 material-loader-spinner.lg .circular{ 
-	height: 50px;
- 	width: 50px; 
+  height: 50px;
+  width: 50px; 
 }
 
 material-loader-spinner.anim{
   transform: scale(1);
   -webkit-transform: scale(1);
 }
-
-</style>
-
-<material-loader-spinner class="multi xs">
-	<svg class="circular" >
-	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
-	</svg>
-</material-loader-spinner>
-
-<material-loader-spinner class="multi md">
-	<svg class="circular">
-	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
-	</svg>
-</material-loader-spinner>
-
-<material-loader-spinner class="multi lg">
-	<svg class="circular">
-	  <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
-	</svg>
-</material-loader-spinner>
-
-<material-loader-spinner class="slide lg">
-  <svg class="circular">
-    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
-  </svg>
-</material-loader-spinner>
-
-<material-loader-spinner class="slide md">
-  <svg class="circular">
-    <circle class="path" cx="25" cy="25" r="20" fill="none" stroke-width="6" stroke-miterlimit="10" />
-  </svg>
-</material-loader-spinner>
-

@@ -1,12 +1,12 @@
 {
   "name": "material-components",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/marco64bit/Material-design-css-components",
   "authors": [
     "Marco Pretelli(lordscapoladestra@gmail.com)"
   ],
   "description": "css material components",
-  "main": "index.html",
+  "main": "examples/index.html",
   "keywords": [
     "material",
     "css3"
